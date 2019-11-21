@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TrainingRecords xmlns="http://tempuri.org/TrainingRecord.xsd">
+  <Day date="2019-11-03">
+    <Ride duration="00:11:01" distance="9.1" route="二环" currency="4" comment="上班">
+      <Point time="09:11:33" description="炮局"/>
+      <Point time="10:11:33" description="新盛"/>
+    </Ride>
+    <Ride distance="8.5" duration="11:22:33">
+      <Point time="07:00:00" description="3"/>
+      <Point time="05:00:00" description="1"/>
+      <Point time="06:00:00" description="2"/>
+    </Ride>
+  </Day>
+</TrainingRecords>

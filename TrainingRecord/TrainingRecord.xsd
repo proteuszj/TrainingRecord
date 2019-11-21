@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TrainingRecord"
+    targetNamespace="http://tempuri.org/TrainingRecord.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/TrainingRecord.xsd"
+    xmlns:mstns="http://tempuri.org/TrainingRecord.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="TrainingRecords">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Day" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ride" type="RideType" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="date" type="xs:date" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="RideType">
+    <xs:sequence>
+      <xs:element name="Point" type="PointType" maxOccurs="unbounded" minOccurs="2"/>
+    </xs:sequence>
+    <xs:attribute name="distance" type="xs:double" use="required"/>
+    <xs:attribute name="duration" type="xs:time"/>
+    <xs:attribute name="route" type="xs:string"/>
+    <xs:attribute name="currency" type="xs:int"/>
+    <xs:attribute name="comment" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="PointType">
+    <xs:attribute name="time" type="xs:time" use="required"/>
+    <xs:attribute name="description" type="xs:string" use="required"/>
+    <xs:attribute name="location" type="xs:string"/>
+  </xs:complexType>
+</xs:schema>
